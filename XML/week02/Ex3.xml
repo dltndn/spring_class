@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<bean name="injectionEx" class="week02.InjectionEx">
+	<!-- <constutor-arg>태그를 명시하지 않을 경우 인자가 없는 기본 생성자를 이용하여 객체를 생성(반드시 기본 생성자 정으) -->
+		<property name="smsSend"> <ref bean="smsSend" /></property>
+		<property name="value"> <value>30000</value></property>
+	</bean>
+	
+	<bean id="smsSend" class="common.SmsSender"></bean>
+</beans>

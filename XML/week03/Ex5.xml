@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<bean name="collectionEx" class="week03.CollectionEx">
+		<property name="deviations">
+			<list value-type="java.lang.Double">
+				<value>0.2</value>
+				<value>0.3</value>
+				<value>0.4</value>
+			</list>
+			<!-- <list>
+				<value type="java.lang.Double">0.2</value>
+				<value type="java.lang.Double">0.3</value>
+				<value type="java.lang.Double">0.4</value>
+			</list> -->
+		</property>
+	</bean>
+	
+</beans>

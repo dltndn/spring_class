@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<bean name="collectionEx" class="week03.CollectionEx">
+		<property name="hand">
+			<map>
+				<entry>
+					<key><value>하나</value></key>
+					<ref bean="smsSend" />
+				</entry>
+				<entry>
+					<key><value>둘</value></key>
+					<ref bean="smsSend" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean name="smsSend" class="common.SmsSender" />
+	
+</beans>
